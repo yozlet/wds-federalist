@@ -253,6 +253,7 @@ Accordion.prototype.hideAll = function() {
  *
  * @param {jQuery} $el A jQuery html element to turn into an accordion.
  */
+// TODO setup default selector for accordion passed through options object.
 function accordion($el) {
   return new Accordion($el);
 }
@@ -284,6 +285,7 @@ function toggleSSN($el) {
 }
 
 function toggleMultiPassword($el) {
+  // TODO should these selectors be ids.
   var fieldSelector = '#password, #confirmPassword',
       $fields = $el.parents('form').find(fieldSelector),
       showing = false;
@@ -296,12 +298,14 @@ function toggleMultiPassword($el) {
   });
 }
 
+// TODO should be part of an object or module.
 function toggleFieldMask($field, showing) {
   $field.attr('autocapitalize', 'off');
   $field.attr('autocorrect', 'off');
   $field.attr('type', showing ? 'password' : 'text');
 }
 
+// TODO should be part of object or module.
 function validator($el) {
   var data = $('#password[data-validation-element]').data(),
       key,
@@ -336,6 +340,7 @@ $(function() {
     accordion($(this));
   });
 
+  // TODO this needs to be move to css (like hiding) and it's own thing.
   var footerAccordion = function() {
     if (window.innerWidth < 600) {
 
@@ -363,7 +368,6 @@ $(function() {
   $('.skipnav').click(function(){
     $('#main-content').attr('tabindex','0');
   });
-
   $('#main-content').blur(function(){
     $(this).attr('tabindex','-1');
   });
