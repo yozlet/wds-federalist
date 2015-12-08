@@ -2,6 +2,8 @@
 
 /* globals $: false */
 
+var $ = require('jquery');
+
 /**
  * Accordion
  *

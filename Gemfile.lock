@@ -77,6 +77,3 @@ DEPENDENCIES
   json
   redcarpet
   rouge (= 1.9)
-
-BUNDLED WITH
-   1.10.6
