@@ -22,30 +22,12 @@
 }
 
 .usa-footer-return-to-top {
-  padding-bottom: 2rem;    
+  padding-bottom: 2rem;
   padding-top: 2rem;
 }
 
 .usa-footer-primary-section {
   background-color: $color-gray-lightest;
-
-  .usa-footer-primary-content {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-
-    @include media($medium-screen) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    li {
-      margin-left: 1rem;
-
-      @include media($medium-screen) {
-        margin-left: 0;
-      }
-    } 
-  }
 
   .usa-grid-full {
     @include media($medium-screen) {
@@ -55,22 +37,40 @@
   }
 }
 
+.usa-footer-primary-content {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  @include media($medium-screen) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  li {
+    margin-left: 1rem;
+
+    @include media($medium-screen) {
+      margin-left: 0;
+    }
+  }
+}
+
 .usa-footer-medium {
   .usa-footer-primary-section {
     padding: 0;
-    
+
     @include media($medium-screen) {
       padding-bottom: 1rem;
       padding-top: 1rem;
     }
   }
 
-  .usa-footer-nav ul {
+  .usa-footer-primary-content {
     @include media($medium-screen) {
       align-items: center;
-      display: flex;  
+      display: flex;
     }
-  }  
+  }
 }
 
 .usa-footer-slim {
@@ -80,23 +80,23 @@
 
   .usa-footer-primary-section {
     padding-bottom: 2rem;
-    
+
     @include media($medium-screen) {
       padding-bottom: 1rem;
       padding-top: 1rem;
-
-      .usa-grid-full {
-        align-items: center;
-        display: flex;     
-      }      
     }
+  }
+
+  .usa-grid-full {
+    align-items: center;
+    display: flex;
   }
 }
 
 ul.usa-footer-primary-content,
 li.usa-footer-primary-content,
 li.usa-footer-primary-content {
-  border-top: 1px solid $color-base;      
+  border-top: 1px solid $color-base;
 
   @include media($medium-screen) {
     border: none;
@@ -133,7 +133,7 @@ li.usa-footer-primary-content {
 
   input {
     width: 100%;
-  }  
+  }
 }
 
 .usa-footer-secondary_section {
@@ -149,7 +149,7 @@ li.usa-footer-primary-content {
 .usa-footer-big-secondary-section {
   @include media($medium-screen) {
     padding-top: 5rem;
-  }  
+  }
 }
 
 .usa-footer-contact-links {
@@ -166,13 +166,32 @@ li.usa-footer-primary-content {
     }
   }
 
+  li {
+    line-height: 2em;
+  }
+
+  .usa-footer-primary-link {
+    background-image: url('../img/arrow-down.png');
+    background-image: url('../img/arrow-down.svg');
+    background-position: 1.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    padding-left: 3.5rem;
+
+    @include media($medium-screen) {
+      background: none;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+  }
+
   ul {
     padding-bottom: 2.5rem;
 
     @include media($medium-screen) {
       padding-bottom: 0;
     }
-    
+
     &:last-child {
       border-bottom: 1px solid $color-base;
 
@@ -181,29 +200,11 @@ li.usa-footer-primary-content {
       }
     }
 
-    li {
-      line-height: 2em;
-    }
-
-    .usa-footer-primary-link {
-      background-image: url('../img/arrow-down.png');
-      background-image: url('../img/arrow-down.svg');
-      background-position: 1.5rem center;
-      background-repeat: no-repeat;
-      background-size: 1.3rem;
-      padding-left: 3.5rem;
-
-      @include media($medium-screen) {
-        background: none;
-        padding-bottom: 0;
-        padding-left: 0;
-      }
-    }
 
     &.hidden {
       padding-bottom: 0;
 
-      .usa-footer-primary-link { 
+      .usa-footer-primary-link {
         background-image: url('../img/arrow-right.png');
         background-image: url('../img/arrow-right.svg');
         cursor: pointer;
@@ -212,9 +213,9 @@ li.usa-footer-primary-content {
         @include media($medium-screen) {
           background: none;
           padding-left: 0;
-        }        
+        }
       }
-        
+
       li { display: none; }
     }
   }
@@ -238,7 +239,7 @@ li.usa-footer-primary-content {
 
 .usa-footer-slim-logo-img {
   float: left;
-  max-width: 10rem; 
+  max-width: 10rem;
 }
 
 .usa-footer-logo-heading {
@@ -247,9 +248,9 @@ li.usa-footer-primary-content {
 
 .usa-footer-contact-heading {
   margin-top: 0;
-  
+
   @include media($medium-screen) {
-    margin-top: 1rem;  
+    margin-top: 1rem;
   }
 }
 

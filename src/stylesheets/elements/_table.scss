@@ -3,37 +3,36 @@ table {
   margin: 2em 0;
   min-width: 100%;
 
-  thead {
-    tr {
-      background-color: $color-gray-lightest;
-    }
+}
 
-    th {
-      text-align: left;
-    }
+thead {
+  tr {
+    background-color: $color-gray-lightest;
   }
 
-  tbody {
-    th {
-      font-weight: $font-normal;
-    }
+  th {
+    text-align: left;
   }
+}
 
-  th, td {
-    border: 1px solid $color-gray;
-    padding: 1.5rem;
+tbody {
+  th {
+    font-weight: $font-normal;
   }
+}
+
+tr {
+  border: 1px solid $color-gray;
+  padding: 1.5rem;
 }
 
 .usa-table-borderless {
   thead {
-    tr {
-      background-color: transparent;
+    // we can un-nest by moving the borders to the trs
+  }
 
-      th {
-        border-top: 0;
-      }
-    }
+  tr {
+    background-color: transparent;
   }
 
   th, td {

@@ -16,14 +16,14 @@ $accordion-border: 3px solid $color-gray-lightest;
     margin: 0;
     padding: 0;
     width: 100%;
+  }
 
-    > li {
-      background-color: $color-gray-lightest;
-      font-family: $font-sans;
-      list-style: none;
-      margin-bottom: 6px;
-      width: 100%;
-    }
+  > li {
+    background-color: $color-gray-lightest;
+    font-family: $font-sans;
+    list-style: none;
+    margin-bottom: 6px;
+    width: 100%;
   }
 
   button[aria-expanded=false] {
@@ -55,10 +55,6 @@ $accordion-border: 3px solid $color-gray-lightest;
     &:hover {
       background-color: $color-gray-lighter;
       color: $color-base;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0;
     }
   }
 }
