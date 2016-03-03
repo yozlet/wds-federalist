@@ -3,6 +3,10 @@ table {
   margin: 2em 0;
   min-width: 100%;
 
+  th, td {
+    border: 1px solid $color-gray;
+    padding: 1.5rem;
+  }
 }
 
 thead {
@@ -21,18 +25,16 @@ tbody {
   }
 }
 
-tr {
-  border: 1px solid $color-gray;
-  padding: 1.5rem;
-}
-
 .usa-table-borderless {
   thead {
-    // we can un-nest by moving the borders to the trs
-  }
+    tr {
+      background-color: transparent;
 
-  tr {
-    background-color: transparent;
+    }
+
+    th {
+      border-top: 0;
+    }
   }
 
   th, td {
