@@ -19,7 +19,7 @@ exclude:
 - ".ruby-version"
 - vendor
 - node_modules
-
+ 
 permalink: pretty
 
 repos:
